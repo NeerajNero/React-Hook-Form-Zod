@@ -3,7 +3,6 @@ import { revalidatePath } from "next/cache";
 
 async function FeedbackPage() {
   const feedbackData = await db.feedback.findMany();
-    revalidatePath("/feedbackpage"); // revalidates the route to fetch new data
   return (
     <main className="min-h-dvh bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <h1 className="text-4xl font-bold text-center text-gray-800 mb-10">User Feedback</h1>
