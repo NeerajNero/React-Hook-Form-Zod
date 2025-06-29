@@ -11,7 +11,7 @@ export default function Home() {
     rating: z.number().min(1).max(5),
   });
 
-  type formFields = z.infer<typeof formSchema>; // Define the type for form fields using zod schema
+  type formFields = z.infer<typeof formSchema>; // Define the type for form fields using zod schema.
 
   const {
     register,
