@@ -1,5 +1,7 @@
 import { db } from "@/lib/db";
-import { revalidatePath } from "next/cache";
+
+export const dynamic = "force-dynamic";
+// This page will always be revalidated on each request, ensuring fresh data
 
 async function FeedbackPage() {
   const feedbackData = await db.feedback.findMany();
